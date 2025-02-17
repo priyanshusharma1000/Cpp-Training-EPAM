@@ -1,3 +1,4 @@
+````````````````````````````````````````````````````````````````````WEEK1`````````````````````````````````````````````````````````````````````````````````````````````````````
 Day1:
 Session taken by : Seetharam Maddineni,
 Training includes the basic introduction of data types in c/c++ and in deapth knowledge about extern and static keyword,
@@ -17,4 +18,13 @@ session includes the concept of strings and some doubt has been solved and taugh
 Day5 & Day6:
 session taken by Lalit Manchwari,
 This includes the the concept of recursion and indeapth analysis of inline function and have done in deapth learning of file handling in c.
+
+
+````````````````````````````````````````````````````````````````WEEK2`````````````````````````````````````````````````````````````````````````````````````````````````````````
+Day1:
+Session taken by : Santosh Malay,
+session include the concept of c programming i.e structure,union,structure padding,pointer and pointer arithmetic, dynamic memory in c i.e calloc malloc relloc and concept of free! 
+
+session taken by : Seetharam Maddineni,
+session includes the concept of basic c++ programming c++ structure and class and all type of constructor and operator overloading of assignment operator and destructor
 
