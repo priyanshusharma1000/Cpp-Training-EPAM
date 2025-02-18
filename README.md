@@ -26,5 +26,6 @@ Session taken by : Santosh Malay,
 session include the concept of c programming i.e structure,union,structure padding,pointer and pointer arithmetic, dynamic memory in c i.e calloc malloc relloc and concept of free! 
 
 session taken by : Seetharam Maddineni,
+OFFICIAL START OF CPP TRAINING!
 session includes the concept of basic c++ programming c++ structure and class and all type of constructor and operator overloading of assignment operator and destructor
 
