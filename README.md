@@ -33,3 +33,21 @@ Santhosh covered essential concepts of C programming, including structures, unio
 Session 2 by: Seetharam Maddineni
 🚀 OFFICIAL START OF C++ TRAINING!
 Seetharam introduced us to the fundamentals of C++ programming, including its structure and the concept of classes. We explored different types of constructors, operator overloading (especially the assignment operator), and the role of destructors in memory management.
+
+Day 2&3&4:
+session taken by santhosh malay which includes the concept of classes of c++ and their default member functions and diff types of constructor and then delve into constructor overloading and then discussion on destructor and how the workflow going on in case of pointer resources of class and the array of objects and then he insist us to make array of objects and check the execution of constructor.
+
+
+
+Day 5:
+session taken by: Narendra Kodi
+Session consist of tricky and intresting question about c programming i.e different format specifiers for ex %o,%x %X,%e %E,%g %f,%10.2s,%-15d
+then some of the task given by him to find the length of the string in c without using loop and he then told to do this using recursion and one more task given by him is to create a program that is capable off adding two large number whose end result go beyong 2^32 - 1 in a 32 bit architecture and 2^64 -1 in a 64 bit architecture.and create our own function in c that has capability to perform the task as of strcpy,strtok,strstr
+
+````````````````````````````````````````````````````````````````````WEEK 3````````````````````````````````````````````````````````````````````````````````````````````````````
+
+Day1: 
+session taken by Lalit Manchwari,
+session includes the concept of oops, mainly focus on polymorphism i.e compile time polymorphism which is achieved through function overloading and operator overloading and he also make us introduce to the concept of Name mangling which is the reason of why function overloading is possible in cpp which is not possible in c where compiler rename the same name function to different name function while doing the compilation process and he also ask us a question that why should we write extern before using c librabry when using in cpp file 
+
+
