@@ -26,6 +26,10 @@ int main(){
 
     instCount i3;
     cout<<"Number of objects of class so far :"<<i2.count()<<endl;
+
+    instCount i4[10];
+    cout<<"Number of objects of class so far :"<<i2.count()<<endl;
+
     
     return 0;
 }
