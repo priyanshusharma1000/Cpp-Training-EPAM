@@ -53,3 +53,7 @@ session includes the concept of oops, mainly focus on polymorphism i.e compile t
 session taken by santhosh malay,
 session starts with the concept of explicit keyword used with constructor then discussion delve into the concept of inheritanc and then he give the example constructor intialization list and their very useful significance in terms of reference variable and constructor chaining and its importance with user defined datatype as the datamember of the class and then discuss different types of inheritance and then he tell us about the concept of static data member of class and then discussion on static member function
 
+
+Day2:
+Session taken by :Lalit Manchwari,
+session includes the concept of run time polymorhism it is achieved through function overriding and through the use of virtual functions and he introduce the concepts of virtual table and virtual pointers and also done discussion on diamond problem which can be resolved using virtual inheritance and also ask us to learn virtual constructor and destructor 
