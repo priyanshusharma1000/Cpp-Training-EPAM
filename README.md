@@ -50,4 +50,6 @@ Day1:
 session taken by Lalit Manchwari,
 session includes the concept of oops, mainly focus on polymorphism i.e compile time polymorphism which is achieved through function overloading and operator overloading and he also make us introduce to the concept of Name mangling which is the reason of why function overloading is possible in cpp which is not possible in c where compiler rename the same name function to different name function while doing the compilation process and he also ask us a question that why should we write extern before using c librabry when using in cpp file 
 
+session taken by santhosh malay,
+session starts with the concept of explicit keyword used with constructor then discussion delve into the concept of inheritanc and then he give the example constructor intialization list and their very useful significance in terms of reference variable and constructor chaining and its importance with user defined datatype as the datamember of the class and then discuss different types of inheritance and then he tell us about the concept of static data member of class and then discussion on static member function
 
