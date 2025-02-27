@@ -57,3 +57,7 @@ session starts with the concept of explicit keyword used with constructor then d
 Day2:
 Session taken by :Lalit Manchwari,
 session includes the concept of run time polymorhism it is achieved through function overriding and through the use of virtual functions and he introduce the concepts of virtual table and virtual pointers and also done discussion on diamond problem which can be resolved using virtual inheritance and also ask us to learn virtual constructor and destructor 
+
+Day3:
+Session taken by :Seetharam Maddineni,
+session contain the discussion iostream/streams in cpp and the concept of friend function and friend class 
