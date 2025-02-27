@@ -1,63 +1,114 @@
-````````````````````````````````````````````````````````````````````WEEK 1````````````````````````````````````````````````````````````````````````````````````````````````````
+Training Program Overview
+This repository contains notes, tasks, and implementations from the training sessions conducted over multiple weeks. The training covered fundamental and advanced concepts of C and C++, including data types, memory management, object-oriented programming, and complex problem-solving techniques. Below is a detailed breakdown of each week's sessions.
 
+``````````````````````````````````````````````````````Week1`````````````````````````````````````````````````````````
 Day 1
-Session by: Seetharam Maddineni,
-The session started with a fundamental introduction to data types in C and C++. It also provided an in-depth understanding of the extern and static keywords. Seetharam assigned us a hands-on task—to perform all possible operations on strings, which can be found in this folder!
+Session by: Seetharam Maddineni
+Introduction to fundamental data types in C and C++.
+Detailed explanation of the extern and static keywords.
+Hands-on assignment: Perform all possible operations on strings (available in this repository).
 
 
 Day 2
-Session 1 by: Santhosh Malay,
-This session was focused on clearing doubts regarding the training. Santhosh also shared some important credentials with us and gave insights into the training program.
+Session 1: Santhosh Malay
+Clarification of doubts regarding the training program.
+Sharing of essential credentials and insights into the training structure.
 
 
-Session 2 by: Lalit Manchwari,
-Lalit introduced us to the structure of C programming and presented some interesting yet tricky questions on printf and scanf, making the session both challenging and engaging!
+Session 2: Lalit Manchwari
+Introduction to the structure of C programming.
+Exploration of tricky questions related to printf and scanf, making the session highly engaging.
 
 
 Day 3 & Day 4
-Session by: Seetharam Maddineni,
-These sessions covered the concepts of strings in depth. Along with resolving doubts, Seetharam introduced the concept of operators and explained the significance of bitwise operators in C++ development.
+Session by: Seetharam Maddineni
+In-depth exploration of strings in C and C++.
+Resolution of doubts and introduction to operators.
+Discussion on the significance of bitwise operators in C++ development.
 
 
 Day 5 & Day 6
-Session by: Lalit Manchwari,
-Lalit dived into the concept of recursion, providing an in-depth analysis of inline functions. Additionally, we explored file handling in C, covering it extensively through practical implementations.
+Session by: Lalit Manchwari
+Detailed discussion on recursion.
+Introduction to inline functions.
+Practical implementation of file handling in C.
 
-``````````````````````````````````````````````````````````````````````````WEEK 2``````````````````````````````````````````````````````````````````````````````````````````````
 
+`````````````````````````````````````````Week 2`````````````````````````````````````````````````````````````````````
 Day 1
-Session 1 by: Santhosh Malay
-Santhosh covered essential concepts of C programming, including structures, unions, structure padding, pointers, and pointer arithmetic. We also delved into dynamic memory allocation using malloc, calloc, realloc, and free, understanding their real-world applications.
+Session 1: Santhosh Malay
+Covered essential concepts of C programming, including:
+Structures, unions, and structure padding.
+Pointers and pointer arithmetic.
+Dynamic memory allocation (malloc, calloc, realloc, free).
 
 
-Session 2 by: Seetharam Maddineni
-🚀 OFFICIAL START OF C++ TRAINING!
-Seetharam introduced us to the fundamentals of C++ programming, including its structure and the concept of classes. We explored different types of constructors, operator overloading (especially the assignment operator), and the role of destructors in memory management.
-
-Day 2&3&4:
-session taken by santhosh malay which includes the concept of classes of c++ and their default member functions and diff types of constructor and then delve into constructor overloading and then discussion on destructor and how the workflow going on in case of pointer resources of class and the array of objects and then he insist us to make array of objects and check the execution of constructor.
-
-
-
-Day 5:
-session taken by: Narendra Kodi
-Session consist of tricky and intresting question about c programming i.e different format specifiers for ex %o,%x %X,%e %E,%g %f,%10.2s,%-15d
-then some of the task given by him to find the length of the string in c without using loop and he then told to do this using recursion and one more task given by him is to create a program that is capable off adding two large number whose end result go beyong 2^32 - 1 in a 32 bit architecture and 2^64 -1 in a 64 bit architecture.and create our own function in c that has capability to perform the task as of strcpy,strtok,strstr
-
-````````````````````````````````````````````````````````````````````WEEK 3````````````````````````````````````````````````````````````````````````````````````````````````````
-
-Day1: 
-session taken by Lalit Manchwari,
-session includes the concept of oops, mainly focus on polymorphism i.e compile time polymorphism which is achieved through function overloading and operator overloading and he also make us introduce to the concept of Name mangling which is the reason of why function overloading is possible in cpp which is not possible in c where compiler rename the same name function to different name function while doing the compilation process and he also ask us a question that why should we write extern before using c librabry when using in cpp file 
-
-session taken by santhosh malay,
-session starts with the concept of explicit keyword used with constructor then discussion delve into the concept of inheritanc and then he give the example constructor intialization list and their very useful significance in terms of reference variable and constructor chaining and its importance with user defined datatype as the datamember of the class and then discuss different types of inheritance and then he tell us about the concept of static data member of class and then discussion on static member function
+Session 2: Seetharam Maddineni
+🚀 Official Start of C++ Training!
+Fundamentals of C++ programming and class structure.
+Explanation of:
+Different types of constructors.
+Operator overloading (especially the assignment operator).
+Destructors and their role in memory management.
 
 
-Day2:
-Session taken by :Lalit Manchwari,
-session includes the concept of run time polymorhism it is achieved through function overriding and through the use of virtual functions and he introduce the concepts of virtual table and virtual pointers and also done discussion on diamond problem which can be resolved using virtual inheritance and also ask us to learn virtual constructor and destructor 
+Day 2 - Day 4
+Session by: Santhosh Malay
+Deep dive into C++ classes and default member functions.
+Covered:
+Constructor types and overloading.
+Destructor behavior with pointer-based resources.
+Execution of constructors in an array of objects.
+Assigned task: Create an array of objects and analyze constructor execution.
 
-Day3:
-Session taken by :Seetharam Maddineni,
-session contain the discussion iostream/streams in cpp and the concept of friend function and friend class 
+
+Day 5
+Session by: Narendra Kodi
+Discussion on tricky and interesting C programming questions.
+Topics covered:
+Various format specifiers (%o, %x, %X, %e, %E, %g, %f, %10.2s, %-15d).
+Task 1: Find the length of a string in C without using loops, then implement it using recursion.
+Task 2: Develop a program to add two large numbers exceeding 2^32 - 1 (for 32-bit) and 2^64 -1 (for 64-bit architectures).
+Task 3: Implement custom functions in C with functionalities similar to strcpy, strtok, and strstr.
+``````````````````````````````````````````````Week 3````````````````````````````````````````````````````````````````
+Day 1
+Session 1: Lalit Manchwari
+Introduction to Object-Oriented Programming (OOP) concepts, focusing on:
+Compile-time polymorphism using function overloading and operator overloading.
+Name mangling in C++, explaining why function overloading is not possible in C.
+Discussion on why extern is required when using C libraries in C++ files.
+
+
+Session 2: Santhosh Malay
+Covered advanced OOP concepts:
+Explicit keyword in constructors.
+Inheritance and constructor initialization lists.
+Significance of reference variables and constructor chaining.
+Different types of inheritance.
+Static data members and static member functions.
+
+
+Day 2
+Session by: Lalit Manchwari
+Introduction to runtime polymorphism:
+Function overriding and virtual functions.
+Explanation of virtual tables and virtual pointers.
+Discussion on the diamond problem and its resolution using virtual inheritance.
+Task: Research virtual constructors and destructors.
+
+
+Day 3
+Session by: Seetharam Maddineni
+In-depth discussion on:
+IOStreams and streams in C++.
+Friend functions and friend classes.
+
+
+
+
+
+
+
+
+
+
