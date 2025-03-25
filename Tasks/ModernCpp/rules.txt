@@ -1,0 +1,85 @@
+Rule of Three, Rule of Five, and Rule of Zero in C++
+
+
+1)Rule of Three :-
+
+Introduction
+
+The Rule of Three in C++ states that if a class manages resources (like dynamic memory), it should explicitly define three special member functions to ensure proper resource management.
+
+
+The Three Special Member Functions
+Destructor (~ClassName()) - Cleans up resources.
+
+Copy Constructor (ClassName(const ClassName& other)) - Creates a deep copy.
+
+Copy Assignment Operator (operator=(const ClassName& other)) - Assigns a deep copy.
+
+Why is the Rule of Three Important?
+
+Prevents memory leaks and dangling pointers.
+
+Ensures proper copying behavior for dynamically allocated resources.
+
+Avoids double deletion issues in destructors.
+
+2)Rule of Five :-
+Introduction
+
+The Rule of Five extends the Rule of Three in C++ by adding move semantics introduced in C++11. It ensures efficient resource management and prevents unnecessary deep copies.
+
+
+The Five Special Member Functions
+Destructor (~ClassName()) - Cleans up resources.
+
+Copy Constructor (ClassName(const ClassName& other)) - Creates a deep copy.
+
+Copy Assignment Operator (operator=(const ClassName& other)) - Assigns a deep copy.
+
+Move Constructor (ClassName(ClassName&& other) noexcept) - Transfers ownership of resources.
+
+Move Assignment Operator (operator=(ClassName&& other) noexcept) - Transfers ownership in assignment.
+
+Why is the Rule of Five Important?
+
+Prevents memory leaks and dangling pointers.
+
+
+Ensures efficient resource management.
+
+
+Enables move semantics for better performance.
+
+
+Avoids unnecessary deep copies, improving speed.
+
+When to Use the Rule of Five?
+When a class manages dynamic memory.
+
+When implementing resource-managing classes (e.g., file handles, sockets, smart pointers).
+
+When dealing with large objects where moving is preferable to copying.
+
+1)Rule of Zero :-
+
+Introduction
+
+The Rule of Zero is a modern C++ design principle that states that user-defined special member functions (destructor, copy/move constructors, and copy/move assignment operators) should be avoided by leveraging RAII (Resource Acquisition Is Initialization) and standard library containers like std::unique_ptr and std::shared_ptr for resource management.
+
+
+Why Use the Rule of Zero?
+Reduces boilerplate code and manual resource management.
+
+Avoids memory leaks and dangling pointers.
+
+Increases exception safety.
+
+Takes advantage of modern C++ features (smart pointers, containers, etc.).
+
+When to Use the Rule of Zero?
+
+When using RAII (Resource Acquisition Is Initialization).
+
+When working with standard library containers (e.g., std::vector, std::string, std::shared_ptr).
+
+When writing modern, maintainable C++ code that avoids manual memory management.
