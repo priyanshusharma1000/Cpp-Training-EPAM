@@ -59,6 +59,7 @@ std::cout << lambda(true);
 // ✅ Fix: Use delete or smart pointers (std::unique_ptr).
 //❌ std:: function issues
 //❌ mutable issues with lambda function
+
 /*int x = 10;
 wrong way...
 auto lambda = [x]() { x = 20; };  // ❌ Compilation error
@@ -81,7 +82,7 @@ int main() {
 } */
 
 //✅ 5. Filtering in STL Algorithms.
-
+/*
 #include <iostream>
 using namespace std;
 
@@ -171,11 +172,158 @@ forEach(arr,[](auto x){
     cout<<x<<" ";
 });
 
-    
-
-
-
-
-
-    return 0;
+return 0;
 }
+
+
+/*
+6 Pitfalls of Lambdas in C++ (With Examples)
+Lambdas are powerful, but they come with potential pitfalls that can cause unexpected behavior or performance issues. Here are six common pitfalls:
+
+1️⃣ Capturing by Reference Without Ensuring Lifetime
+Lambdas capturing variables by reference do not extend their lifetime. If the variable goes out of scope, accessing it causes undefined behavior.
+
+Example:
+cpp
+Copy
+Edit
+#include <iostream>
+#include <functional>
+
+std::function<void()> getLambda() {
+    int x = 10;
+    return [&]() { std::cout << x << "\n"; }; // ❌ Capturing `x` by reference
+}
+
+int main() {
+    auto lambda = getLambda();  // x is destroyed when function exits
+    lambda(); // ❌ Undefined behavior (accessing a dangling reference)
+}
+Fix: Capture by value instead:
+cpp
+Copy
+Edit
+return [x]() { std::cout << x << "\n"; }; // ✅ Capturing by value
+2️⃣ Mutable Variables Not Updated in Capture
+By default, lambda captures are read-only. Trying to modify captured values inside the lambda won’t work.
+
+Example:
+cpp
+Copy
+Edit
+#include <iostream>
+
+int main() {
+    int x = 5;
+    auto lambda = [x]() { x += 10; }; // ❌ x inside lambda is a copy, not modified outside
+    lambda();
+    std::cout << x; // Output: 5 (not 15)
+}
+Fix: Use the mutable keyword:
+cpp
+Copy
+Edit
+auto lambda = [x]() mutable { x += 10; };
+3️⃣ Large Object Capture by Value (Performance Issue)
+Capturing large objects by value creates unnecessary copies, which can impact performance.
+
+Example:
+cpp
+Copy
+Edit
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> largeVec(1'000'000, 42);
+    
+    auto lambda = [largeVec]() { // ❌ Creates a costly copy
+        std::cout << largeVec.size();
+    };
+}
+Fix: Capture by reference or use std::move if ownership is needed:
+cpp
+Copy
+Edit
+auto lambda = [&largeVec]() { std::cout << largeVec.size(); }; // ✅ Capture by reference
+or
+
+cpp
+Copy
+Edit
+auto lambda = [vec = std::move(largeVec)]() { std::cout << vec.size(); }; // ✅ Move instead of copy
+4️⃣ Dangling Reference from std::bind with Temporary Objects
+Using std::bind with lambdas can lead to dangling references if a temporary variable is used.
+
+Example:
+cpp
+Copy
+Edit
+#include <iostream>
+#include <functional>
+
+int main() {
+    auto lambda = std::bind([](const int& x) { std::cout << x; }, 42); // ❌ Binding temporary
+    lambda(); // ❌ Undefined behavior (dangling reference)
+}
+Fix: Pass values instead of references in std::bind:
+cpp
+Copy
+Edit
+auto lambda = std::bind([](int x) { std::cout << x; }, 42); // ✅ Pass by value
+5️⃣ Unexpected Type Deduction Issues in Templates
+Lambdas have unique types, which can cause issues in template functions expecting specific callable types.
+
+Example:
+cpp
+Copy
+Edit
+#include <iostream>
+
+template <typename Callable>
+void callTwice(Callable func) {
+    func();
+    func();
+}
+
+int main() {
+    auto lambda = [] { std::cout << "Hello\n"; };
+    callTwice(lambda); // ✅ Works
+
+    callTwice([] { std::cout << "World\n"; }); // ❌ Error: different types for each lambda
+}
+Fix: Use std::function to store lambda:
+cpp
+Copy
+Edit
+void callTwice(std::function<void()> func) { func(); func(); }
+6️⃣ Unnecessary Heap Allocation for std::function
+When assigning lambdas to std::function, heap allocation occurs if the lambda is too large.
+
+Example:
+cpp
+Copy
+Edit
+#include <iostream>
+#include <functional>
+
+int main() {
+    std::function<void()> func = [bigArray = std::vector<int>(1'000'000)]() {
+        std::cout << "Using big array\n";
+    }; // ❌ May cause heap allocation
+
+    func();
+}
+Fix: Use auto or explicitly optimize memory usage:
+cpp
+Copy
+Edit
+auto lambda = [bigArray = std::vector<int>(1'000'000)]() { std::cout << "Optimized\n"; }; // ✅ No heap allocation
+🔹 Conclusion
+Lambdas are powerful, but misuse can lead to performance issues or undefined behavior.
+To avoid pitfalls: ✔ Ensure correct capture (value vs reference)
+✔ Use mutable for modifying captured values
+✔ Avoid unnecessary copies
+✔ Watch out for lifetime issues
+✔ Prefer auto over std::function for performance
+*/
